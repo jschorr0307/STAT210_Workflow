@@ -1,0 +1,122 @@
+---
+title: "R Notebook"
+output:
+  html_document:
+    df_print: paged
+---
+
+##### **Chapter 4**
+
+###### **4.1**
+
+* Coding basics
+    + We can do simple math equations in R
+    + We can also assign variables in R with the <- operator or the = operator
+    
+###### **4.2**
+
+* Naming
+    + You can coose to name objects in different ways
+        + name_one, name.one, NameOne are some examples
+        + You can choose a way thats good for you and **stay consistent**
+    + We can call and inspect objects by typing them in to the console
+        + Be sure to use proper spelling and case sensitive
+        + R will auto fill your objects while you're typing them
+        
+###### **4.3**
+
+* Calling Functions
+    + Basic function call: function.name(arg1 = value, arg2 = value...)
+    + R will auto fill closing parenthesis and quotes while you're typing
+        + If there isn't a closing parenthesis or quote, a **+** will appear in the console
+    + If you want to auto print an object with an assignment put oarenthesis arounf the whole thing 
+        + Example: **(object.name <- value)**
+    + You can see all objects and functions under the "Envitonment" tab in the top left section of R Studio
+    
+###### **4.4**
+
+Practice
+1.
+```{r 4.4 1}
+my_variable <- 10
+my_varıable
+# The dot above the i is missing
+my_variable
+```
+2. 
+```{r 4.4 2}
+library(tidyverse)
+
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy))
+
+fliter(mpg, cyl = 8) # filter is spelled wrong and == is needed
+filter(mpg, cyl == 8)
+filter(diamond, carat > 3) # diamond data was not inputted
+```
+3. 
+* Press alt+shift+k
+    + this will bring up a shortcut menu
+    
+
+##### **Chapter 6**
+
+###### **6.1**  
+
+* Running Code 
+    + If you type code into the script or code chunk, **ctrl+enter** will run the line you are on and move the cursor to the next line
+        + You can run the entire script by using **ctrl+shift+s**
+    + Always include the packages you use in your code with library(package.name)
+    + Never add install.packages(package.name) because that will mess with the settings on other people's pc
+    
+###### **6.2**  
+
+* Diagnostics
+    + The script will show errors in code with squggle lines under code or a red X at the beginning of the line
+        + You can hover over the X to see what errors are in that line
+    + Script will put a yellow caution sign at the beginning of a line to warn against potential errors
+    
+###### **6.3** 
+
+Practice
+* Go to R Studio twitter
+* Other errors R could throw
+
+
+##### **Chapter 8**
+
+###### **8.1** 
+
+* What is real?
+    + Your R script is "real"
+    + It is not good practice to save your workspace.
+    + Here is a shortcut to use instead of saving the workspace:
+        + Press Cmd/Ctrl + Shift + F10 to restart RStudio.
+        + Press Cmd/Ctrl + Shift + S to rerun the current script.
+        
+###### **8.2**   
+
+* Where does your analysis live?
+    + You should now be sorting your scripts into properly organized directories instead of the default ones
+    
+###### **8.3** 
+
+* Paths and Directories
+    + Make sure you are using the proper slashes. Some use / while others use \
+    
+###### **8.4** 
+
+* Projects
+    + Projects will keep all files associated with it in an organized place
+    + When creating a new project make sure you save it in the proper directory for easy access later
+
+
+
+
+
+
+
+
+
+
+
